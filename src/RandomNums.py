@@ -9,6 +9,19 @@ def random_select(data):
     a = random.choice(data)
     return a
 
+# Select n number(s) of values from the list without seeding
+def random_subset(data):
+    a = random.randint(0, len(data)+1)
+    subset = random.choices(data, k=a)
+    return subset
+
+# Select n number(s) of values from the list with seeding
+def random_subset_seeding(data):
+    random.seed(5)
+    a = random.randint(0,len(data)+1)
+    subset = random.choices(data, k=a)
+    return subset
+
 class RandomNums:
 
     def __init__(self):
@@ -19,6 +32,9 @@ class RandomNums:
 
     # Randomly selected number
     random_selected = 0
+
+    # Random subset
+    randomly_subset = []
 
     # List of random numbers
     data = []
@@ -49,3 +65,14 @@ class RandomNums:
         random.seed(5)
         self.random_selected = random_select(self.data)
         return self.random_selected
+
+    # Returns randomized subset from list without seeding
+    def randomly_subset(self):
+        self.randomly_subset.append(random_subset(self.data))
+        return self.randomly_subset
+
+    # Returns randomized subset from list with seeding
+    def randomly_subset_seed(self):
+        random.seed(5)
+        self.randomly_subset.append(random_subset_seeding(self.data))
+        return self.randomly_subset
