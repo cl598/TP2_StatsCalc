@@ -7,3 +7,7 @@
 
   * Matthew Keaton
   * Christian Le
+
+# Index
+* [Tasks List](https://github.com/cl598/TP2_StatsCalc/blob/master/TASKS.md)
+* [Project Outline](https://github.com/cl598/TP2_StatsCalc/blob/master/OUTLINE.md)
