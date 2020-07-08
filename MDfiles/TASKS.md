@@ -2,7 +2,11 @@
 
 Matthew Keaton
 - 
-  
+    - Task: created the zscore function
+    - Task: created the simple random sampling function
+    - Task: created the margin of error function
+    - Task: created the confidence interval function
+
 Christian Le
 -
     - Task: created the random generator function
