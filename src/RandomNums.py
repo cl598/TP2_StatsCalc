@@ -1,5 +1,6 @@
 import random
 
+<<<<<<< HEAD
 # Random number
 def random_number(a):
     return a
@@ -23,10 +24,19 @@ def random_subset_seeding(data):
     return subset
 
 class RandomNums:
+=======
+class RandomNums:
+
+    list1 = []
+
+    list2_range = range(10)
+    list2 = []
+>>>>>>> origin/master
 
     def __init__(self):
         pass
 
+<<<<<<< HEAD
     # Randomized number
     random_num = 0
 
@@ -76,3 +86,16 @@ class RandomNums:
         random.seed(5)
         self.randomly_subset.append(random_subset_seeding(self.data))
         return self.randomly_subset
+=======
+    # Without seeding
+    for num in range(list1.length):
+        random_value = random.random()
+        list1.append(random_value)
+
+    # With seeding
+    for num2 in range(list2_range.length):
+
+        random.seed(10)
+        random_value2 = random.randint(0,10)
+        list2.append(random_value2)
+>>>>>>> origin/master
