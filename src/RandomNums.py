@@ -23,6 +23,11 @@ class RandomNums:
     # List of random numbers
     data = []
 
+    # List of random number(s) with seeding
+    for num in range(0, len(data) + 1):
+        random.seed(5)
+        data.append(random_number(round(random.uniform(0.00, 102.00), 2)))
+
     # Generates random number without seeding
     def generate_num(self):
         self.random_num = random_number(round(random.uniform(0.00, 102.00), 2))
