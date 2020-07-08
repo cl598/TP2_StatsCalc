@@ -2,6 +2,11 @@
 
 Matthew Keaton
 - 
+    - Task: created the mean parameter
+    - Task: created the median parameter
+    - Task: created the mode parameter
+    - Task: created the variance parameter
+    - Task: created the standard deviation parameter
     - Task: created the zscore function
     - Task: created the simple random sampling function
     - Task: created the margin of error function
