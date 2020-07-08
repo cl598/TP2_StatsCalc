@@ -1,8 +1,37 @@
 # PROJECT OUTLINE
 
 **Calculator.py**
-  - Methods
-  
+  - Functions
+    - zScore
+      - Calls for statistics.mean()
+      - Calls for statistics.pstdev()
+      - Uses for loop to evaluate the zScore formula
+      - Returns the zScore value
+    - simpleRandomSample
+      - Calls for random.randint()
+      - Uses for loop to add to the sample list
+      - Returns the simple random sample list
+    - marginOfError
+      - Calls for statistics.pstdev()
+      - Calls for zScore function
+      - Uses for loop to evaluate the margin of error formula
+      - Returns the margin of error list
+    - confInterval
+      - Calls for statistics.mean()
+      - Calls for statistics.pstdev()
+      - Uses for loop to evaluate the two values
+      - Returns the confidence interval list
+  - Parameters
+    - Mean
+      - Calls for statistics.mean()
+    - Median
+      - Calls for statistics.median()
+    - Mode
+      - Calls for statistics.mode()
+    - Variance
+      - Calls for statistics.pvariance()
+    - Standard deviation
+      - Calls for statistics.pstdev() 
 
   
 **RandomNums.py**
@@ -10,11 +39,11 @@
     - Random_number
       - Returns a randomized number from the list
     - Random_select
-      - Returns randomly selected number from the list
+      - Returns randomly selected number from the list with random.choice()
     - Random_subset
-      - Returns a subset of randomly selected numbers from the list
+      - Returns a subset of randomly selected numbers from the list with random.choices()
     - Random_subset_seeding
-      - Returns a subset of randomly selected numbers from the list with seeding
+      - Returns a subset of randomly selected numbers from the list with seeding with random.choices()
   - Properties
     - Data
       - List of randomized numbers
