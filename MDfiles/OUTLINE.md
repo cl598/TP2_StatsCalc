@@ -16,12 +16,13 @@
       - Calls for zScore function
       - Uses for loop to evaluate the margin of error formula
       - Returns the margin of error list
+    - cochSample
+      - Returns the cochran sample size results
     - confInterval
       - Calls for statistics.mean()
       - Calls for statistics.pstdev()
       - Uses for loop to evaluate the two values
       - Returns the confidence interval list
-  - Parameters
     - Mean
       - Calls for statistics.mean()
     - Median

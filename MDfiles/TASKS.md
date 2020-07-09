@@ -2,12 +2,6 @@
 
 Matthew Keaton
 - 
-    - Task: created Calculator.py
-    - Task: created the mean parameter
-    - Task: created the median parameter
-    - Task: created the mode parameter
-    - Task: created the variance parameter
-    - Task: created the standard deviation parameter
     - Task: created the zscore function
     - Task: created the simple random sampling function
     - Task: created the margin of error function
@@ -23,5 +17,9 @@ Christian Le
     - Task: created the random-subset function
     - Task: created the random-subset-seed function
     - Task: added the for loop to add random numbers to the list
-
+    - Task: created the mean function
+    - Task: created the median function
+    - Task: created the mode function
+    - Task: created the population variance function
+    - Task: created the population standard deviation function
 
