@@ -1,28 +1,17 @@
 import random
 import math
 import statistics
-
+import scipy.stats as st
 #zScore function start
 
 
 def zScore(data):
     #z = (x - mean)/standard deviation
-    
-    meanData = statistics.mean(data)
-    SDPopulation = statistics.pstdev(data)
-    
-    zScores = []
-
-    for x in data:
-        zScore = (x - meanData)/ SDPopulation
-        zScores.append(zScore)
-        
-    
-    
+    zScores = st.zscore(data)
     return zScores
 #zScore function end
 
-test = [12,46,23,87,43,91,74,88]
+test = [1,8,6,5,5,4,5,10]
 
 
 #Simple Random Sample function start
@@ -44,7 +33,7 @@ def simpleRandomSample(data):
 #Margin of Error function start
 def marginOfError(data):
     
-    SDPopulation = statistics.pstdev(data)
+    SDPopulation = st.tstd(data)
     
     scores = zScore(data)
     
@@ -52,15 +41,33 @@ def marginOfError(data):
     moe = []
     
     for score in scores:
-        MarginOfError =  score * SDPopulation / len(data)
+        MarginOfError =  score * SDPopulation / math.sqrt(len(data))
         moe.append(MarginOfError)
     
     return moe
 #Margin of Error function end
 
 #Cochrans Sample Size formula function start
+def cochSample(data):
+    e = marginOfError(data)
+    Z = zScore(data)
+    ps = st.norm.cdf(Z)
+    result = []
+    
+    for p in range(len(ps)):
+        
+        if ps[p] == 'nan':
+            continue
+        else:
+    
+            result.append(Z[p]**2 * ps[p]*(1-ps[p])/e[p]**2)
+            
+    return result
 
 #Cochrans Sample Size formula function end
+
+#def unknownPopSD(data):
+    
 
 # Confidence interval for a sample start
 
@@ -79,4 +86,4 @@ def confInterval(data):
     
     return confidence
 # Confidence interval for a sample start
-
+print(marginOfError(test))
